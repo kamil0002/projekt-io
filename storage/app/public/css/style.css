@@ -1,0 +1,205 @@
+html, body{
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* STRONA GLOWNA */
+  .carousel-item img{
+    object-fit: cover;
+    overflow: hidden;
+    filter: brightness(0.6);
+    min-height: 30vh;
+    max-height: 95vh;
+  }
+
+  .login-btn:hover,.register-btn:hover,.btn-reservation:hover{
+    transform: translate(0px, -3px);
+    transition: transform 300ms ease-in-out 25ms;
+  }
+
+  .nav-item{
+     position: relative;
+  }
+
+  .nav-item:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+
+  .nav-item:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-item-btn:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease 0.1s, left 0.5s ease 0.1s;
+    width: 0;
+  }
+  @media only screen and (max-width: 992px) {
+    .how-it-works-img {
+      width: 60% !important;
+      min-width: 300px;
+    }
+
+    .how-it-works-text {
+      width: 60% !important;
+      min-width: 300px;
+    }
+  }
+
+
+  .how-it-works-img > img {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    height: 300px;
+  }
+
+  @media only screen and (max-width: 1140px) {
+    .how-it-works-img > img {
+      height: 270px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .how-it-works-img > img {
+      clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+      max-height: 30vw;
+      min-height: 200px;
+    }
+  }
+
+ /* KARTY OPIN */
+  .review-card .card-up{
+    height: 5px;
+      overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+
+
+  .gradient {
+    background: linear-gradient(90deg, #504949, #000000) !important;
+  }
+
+  /*.review-card .avatar {
+    width: 100px;
+    margin-top: -40px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+  }*/
+
+  .card-paragraph-content{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+            line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .review-card:hover,.card-car:hover{
+    transform: translate(0px, -5px);
+    transition: transform 300ms ease-in-out 25ms;
+  }
+
+/* REJESTRACJA I LOGIN */
+  .log-or-reg {
+    position: relative;
+    color: rgb(85, 84, 84);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #f8fafc;
+    width: 50px;
+}
+
+.hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+/* FORMSY */
+.form-control {
+    background-color: rgba(236, 235, 235, 0.692);
+}
+
+/* FLOTA */
+
+@media only screen and (max-width: 400px) {
+  .btns {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .btn-reserv,
+  .btn-details {
+      margin-left: 0px !important;
+      margin-bottom: 10px !important;
+      width: 100%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+    .btn-reserv {
+      margin-right: 5px !important;
+      width: 50%;
+  }
+  .btn-details{
+      margin-left: 5px !important;
+      width: 50%;
+  }
+}
+
+/* SZCZEGOLY SAMOCHODU */
+
+@media only screen and (max-width: 500px) {
+  .car-single {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+.features {
+  list-style-image: url("../img/icons/yes.png");
+  width: 200px;
+}
+
+
+/* ADMIN PANEL */
+@media only screen and (max-width: 800px) {
+  .content-of-admin-panel{
+      margin-top: 40vw !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content-of-admin-panel{
+      margin-top: 50vw !important;
+  }
+}
