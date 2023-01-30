@@ -54,10 +54,10 @@
                                         style="font-size: 11px !important;">/dzień</span></p>
                             </div>
                             <div class="btns d-flex mb-0 d-block rounded-2">
-                                @if (Auth::user()->role == 'user')
-                                <a href="{{ route('rent', $car->id) }}" class="btn-reserv btn btn-danger py-2 px-4">Zarezerwuj</a>
+                                @if(Auth::user() && Auth::user()->role != 'admin')
+                                    <a href="{{ route('rent', $car->id) }}" class="btn-reserv btn btn-danger py-2 px-4">Zarezerwuj</a>
                                 @endif
-                                <a href="{{ route('carfleet.cardetails', $car->id) }}" class="btn-details btn btn-dark py-2 rounded-2 px-4" style="{{Auth::user()->role == 'admin' ? 'margin: 0 auto; width: 100%' : ''}}">Szczegóły</a>
+                                <a href="{{ route('carfleet.cardetails', $car->id) }}" class="btn-details btn btn-dark py-2 rounded-2 px-4" style="{{(Auth::user() && Auth::user()->role == 'admin') || !Auth::user() ? 'margin: 0 auto; width: 100%' : ''}}">Szczegóły</a>
                             </div>
                         </div>
                     </div>
